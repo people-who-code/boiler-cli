@@ -30,6 +30,8 @@ func main() {
 		cmd = exec.Command("bash", "-c", fmt.Sprintf("django-admin startproject %s .", projectname))
 	case "react":
 		cmd = exec.Command("bash", "-c", fmt.Sprintf("npx create-react-app %s .", projectname))
+	case "rails":
+		cmd = exec.Command("bash", "-c", fmt.Sprintf("rails new %s .", projectname))
 	default:
 		fmt.Printf("Unsupported framework: %s\n", framework)
 		os.Exit(1)
